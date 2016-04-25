@@ -1,0 +1,16 @@
+quiz taker
+
+by dominick hera
+
+
+- takes location of user quiz 
+- asks for location for quiz results
+- parses quiz
+- buffer between admin and quiz taker part
+- quiz will ask each question one at a time
+- user will answer each question and then hit enter to reach next question
+- (potential command to go back?)
+- program records answers
+- user finishes answering questions
+- asks if the quiz needs to be taken again
+- otherwise outputs all answers into specified answer location
