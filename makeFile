@@ -1,0 +1,25 @@
+CFLAGS = -std=c99 -Wall
+EXE = quiz
+
+all: $(EXE)
+
+$(EXE): main.o parse.o functions.o BIN
+	gcc main.o parse.o functions.o -o ./bin/$(EXE)
+
+BIN:
+	if [ ! -d "bin" ]; then mkdir bin; fi;
+
+
+main.o: ./src/main.c
+	gcc -c $(CFLAGS) ./src/main.c -Iinclude
+
+
+parse.o: ./src/parse.c
+	gcc -c $(CFLAGS) ./src/parse.c -Iinclude
+
+functions.o: ./src/functions.c
+	gcc -c $(CFLAGS) ./src/functions.c -Iinclude
+
+clean:
+	rm *.o
+
